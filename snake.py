@@ -1,7 +1,7 @@
 """
 Developed by Limon250
 Date: 09.07.2020
-Python version 3.8
+Python version 3.8.3 64-bit
 """
 
 import pygame, sys, random
@@ -321,51 +321,6 @@ def game():
     d_col = buf_col = 1
     total = 0
     speed = 1
-
-    def lvl_1():
-        pass
-
-    def lvl_2():
-        pass
-
-    def lvl_3():
-        pass
-
-    def lvl_4():
-        pass
-
-    def lvl_5():
-        pass
-
-    def lvl_6():
-        pass
-
-    def lvl_7():
-        pass
-
-    def lvl_8():
-        pass
-
-    def lvl_9():
-        pass
-
-    def lvl_10():
-        pass
-
-    def lvl_11():
-        pass
-
-    def lvl_12():
-        pass
-
-    def lvl_13():
-        pass
-
-    def lvl_14():
-        pass
-
-    def lvl_15():
-        pass
         
     running = True
     while running:
