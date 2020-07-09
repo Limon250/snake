@@ -1,6 +1,7 @@
 """
 Developed by Limon250
 Date: 09.07.2020
+Python version 3.8
 """
 
 import pygame, sys, random
@@ -59,13 +60,14 @@ def main_menu():
         bttn3 = pygame.Rect(125, 350, 200, 50)
         if bttn1.collidepoint((mx, my)):
             if click:
-                game()
+                choose_level()
         if bttn2.collidepoint((mx, my)):
             if click:
                 options()
         if bttn3.collidepoint((mx, my)):
             if click:
                 _quit()
+
         mouse = pygame.mouse.get_pos()
         #print(mouse)
 
@@ -132,6 +134,167 @@ def _quit():
         else:
             main_menu()
 
+def choose_level():
+    click = False
+    while True:
+
+        screen.fill((0, 0, 0))
+        draw_text('Choose level', med_font, (255, 255, 255), screen, 125, 20)
+
+        mx, my = pygame.mouse.get_pos()
+
+        bttn1 = pygame.Rect(50, 100, 50, 50)
+        bttn2 = pygame.Rect(125, 100, 50, 50)
+        bttn3 = pygame.Rect(200, 100, 50, 50)
+        bttn4 = pygame.Rect(275, 100, 50, 50)
+        bttn5 = pygame.Rect(350, 100, 50, 50)
+        bttn6 = pygame.Rect(50, 200, 50, 50)
+        bttn7 = pygame.Rect(125, 200, 50, 50)
+        bttn8 = pygame.Rect(200, 200, 50, 50)
+        bttn9 = pygame.Rect(275, 200, 50, 50)
+        bttn10 = pygame.Rect(350, 200, 50, 50)
+        bttn11 = pygame.Rect(50, 300, 50, 50)
+        bttn12 = pygame.Rect(125, 300, 50, 50)
+        bttn13 = pygame.Rect(200, 300, 50, 50)
+        bttn14 = pygame.Rect(275, 300, 50, 50)
+        bttn15 = pygame.Rect(350, 300, 50, 50)
+
+        bttn_back = pygame.Rect(250, 450, 150, 50)
+
+        if bttn1.collidepoint((mx, my)):
+            if click:
+                game().lvl_1()
+        if bttn2.collidepoint((mx, my)):
+            if click:
+                game().lvl_2()
+        if bttn3.collidepoint((mx, my)):
+            if click:
+                game().lvl_3()
+        if bttn4.collidepoint((mx, my)):
+            if click:
+                game().lvl_4()
+        if bttn5.collidepoint((mx, my)):
+            if click:
+                game().lvl_5()
+        if bttn6.collidepoint((mx, my)):
+            if click:
+                game().lvl_6()
+        if bttn7.collidepoint((mx, my)):
+            if click:
+                game().lvl_7()
+        if bttn8.collidepoint((mx, my)):
+            if click:
+                game().lvl_8()
+        if bttn9.collidepoint((mx, my)):
+            if click:
+                game().lvl_9()
+        if bttn10.collidepoint((mx, my)):
+            if click:
+                game().lvl_10()
+        if bttn11.collidepoint((mx, my)):
+            if click:
+                game().lvl_11()
+        if bttn12.collidepoint((mx, my)):
+            if click:
+                game().lvl_12()
+        if bttn13.collidepoint((mx, my)):
+            if click:
+                game().lvl_13()
+        if bttn14.collidepoint((mx, my)):
+            if click:
+                game().lvl_14()
+        if bttn15.collidepoint((mx, my)):
+            if click:
+                game().lvl_15()
+        if bttn_back.collidepoint((mx, my)):
+            if click:
+                main_menu()
+
+        mouse = pygame.mouse.get_pos()
+        #print(mouse)
+
+        if 50+50 > mouse[0] > 50 and 100+50 > mouse[1] > 100:
+            pygame.draw.rect(screen, (35, 206, 250), bttn1)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn1)
+        if 125+50 > mouse[0] > 125 and 100+50 > mouse[1] > 100:
+            pygame.draw.rect(screen, (35, 206, 250), bttn2)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn2)
+        if 200+50 > mouse[0] > 200 and 100+50 > mouse[1] > 100:
+            pygame.draw.rect(screen, (35, 206, 250), bttn3)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn3)
+        if 275+50 > mouse[0] > 275 and 100+50 > mouse[1] > 100:
+            pygame.draw.rect(screen, (35, 206, 250), bttn4)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn4)
+        if 350+50 > mouse[0] > 350 and 100+50 > mouse[1] > 100:
+            pygame.draw.rect(screen, (35, 206, 250), bttn5)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn5)
+        if 50+50 > mouse[0] > 50 and 200+50 > mouse[1] > 200:
+            pygame.draw.rect(screen, (35, 206, 250), bttn6)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn6)
+        if 125+50 > mouse[0] > 125 and 200+50 > mouse[1] > 200:
+            pygame.draw.rect(screen, (35, 206, 250), bttn7)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn7)
+        if 200+50 > mouse[0] > 200 and 200+50 > mouse[1] > 200:
+            pygame.draw.rect(screen, (35, 206, 250), bttn8)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn8)
+        if 275+50 > mouse[0] > 275 and 200+50 > mouse[1] > 200:
+            pygame.draw.rect(screen, (35, 206, 250), bttn9)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn9)
+        if 350+50 > mouse[0] > 350 and 200+50 > mouse[1] > 200:
+            pygame.draw.rect(screen, (35, 206, 250), bttn10)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn10)
+        if 50+50 > mouse[0] > 50 and 300+50 > mouse[1] > 300:    
+            pygame.draw.rect(screen, (35, 206, 250), bttn11)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn11)
+        if 125+50 > mouse[0] > 125 and 300+50 > mouse[1] > 300:
+            pygame.draw.rect(screen, (35, 206, 250), bttn12)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn12)
+        if 200+50 > mouse[0] > 200 and 300+50 > mouse[1] > 300:
+            pygame.draw.rect(screen, (35, 206, 250), bttn13)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn13)
+        if 275+50 > mouse[0] > 275 and 300+50 > mouse[1] > 300:
+            pygame.draw.rect(screen, (35, 206, 250), bttn14)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn14)
+        if 350+50 > mouse[0] > 350 and 300+50 > mouse[1] > 300:
+            pygame.draw.rect(screen, (35, 206, 250), bttn15)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn15)
+        
+        if 250+150 > mouse[0] > 250 and 450+50 > mouse[1] > 450:
+            pygame.draw.rect(screen, (35, 206, 250), bttn_back)
+        else:
+            pygame.draw.rect(screen, (0, 0, 150), bttn_back)
+
+        click = False
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                print('quit')
+                pygame.exit()
+                sys.exit()
+            if event.type == KEYDOWN:
+                if event.key == K_ESCAPE:
+                    main_menu()
+            if event.type == MOUSEBUTTONDOWN:
+                if event.button == 1:
+                    click = True
+
+        pygame.display.update()
+        timer.tick(60)
+
 def game():
     class SnakeBlock:
         def __init__(self, x, y):
@@ -159,6 +322,51 @@ def game():
     total = 0
     speed = 1
 
+    def lvl_1():
+        pass
+
+    def lvl_2():
+        pass
+
+    def lvl_3():
+        pass
+
+    def lvl_4():
+        pass
+
+    def lvl_5():
+        pass
+
+    def lvl_6():
+        pass
+
+    def lvl_7():
+        pass
+
+    def lvl_8():
+        pass
+
+    def lvl_9():
+        pass
+
+    def lvl_10():
+        pass
+
+    def lvl_11():
+        pass
+
+    def lvl_12():
+        pass
+
+    def lvl_13():
+        pass
+
+    def lvl_14():
+        pass
+
+    def lvl_15():
+        pass
+        
     running = True
     while running:
 
